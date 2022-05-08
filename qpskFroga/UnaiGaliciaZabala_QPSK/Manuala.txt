@@ -1,0 +1,38 @@
+QPSK MODULATZAILEA - UNAI GALICIA ZABALA
+
+Programa honek erabiltzaileak adierazitako bitstream bat QSPKn modulatzen du.
+Horretarako, ondorengo balioak eskatzen dira:
+
+- Laginketa maiztasuna (fs)
+- Garraiatzailearen maiztasuna (fc)
+- Sinboloen abiadura (Vs)
+- Modulatu nahi diren bit kopurua (n)
+- Modulatu nahi diren bitak (m)
+
+Emaitza bezala, programak bi CSV fitxategi sortzen ditu:
+
+- csvFitx.csv: Seinale modulatuaren balioak
+- times.csv: Denbora basea irudikapenerako
+
+MATLABEN BISTARATU CSV FITXATEGIAK
+
+Hartu sortutako fitxategi biak: times.csv, csvFitx.csv
+Eraman matlabera eta kargatu:
+
+>> A = csvread('csvFitx.csv');
+>> B = csvread('times.csv');
+
+Fitxategi biak erabiltzaileak sartutako bit kopurua zati bi lerro eta fs zutabe izango ditu.
+Hortaz, dena array bitan (C, D) sartu plot egin ahal izateko:
+
+>> C = A';
+>> C = C(:)';
+>> D = B';
+>> D = D(:)';
+
+Denbora eta QPSK datuen arraya izanda, ploteatu:
+
+>> plot(D, C);
+
+Matlab scripta manual honekin bat bidaltzen da. (bistaratu.mat)
+
