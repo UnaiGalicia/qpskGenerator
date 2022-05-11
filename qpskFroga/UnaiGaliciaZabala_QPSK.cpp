@@ -180,15 +180,15 @@ void sortuCar(float* t, float* res, int fc, float tb, int fs, int auk) {
 
 		for (int i = 0; i < fs; i++) {
 
-			res[i] = (float)(sqrt((float)2 / tb) * cos((double)((float)2 * PI * (float)fc * t[i])));
-
+			res[i] = /*(float)(sqrt((float)2 / tb) * */ cos((double)((float)2 * PI * (float)fc * t[i]));//); kendu komentarioak eta originala lortu
+																										// Helburua: 0-1 artean egotea QPSK
 		}
 	}
 	else {
 
 		for (int i = 0; i < fs; i++) {
 
-			res[i] = (float)(sqrt((float)2 / tb) * sin((double)((float)2 * PI * (float)fc * t[i])));
+			res[i] = /* (float)(sqrt((float)2 / tb) * */ sin((double)((float)2 * PI * (float)fc * t[i]));//); Kendu komentarioak eta originala
 
 		}
 
